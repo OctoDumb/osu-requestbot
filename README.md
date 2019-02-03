@@ -37,4 +37,4 @@ npm start
 -  [ ] There shall be more...
 
 ## TODO
--  [ ] Fix requests count on widget restart 
+-  [X] Fix requests count on widget restart 
