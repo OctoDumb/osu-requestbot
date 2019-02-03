@@ -14,6 +14,7 @@ const cfg = JSON.parse(fs.readFileSync("./config.json"));
 let window;
 
 let requests = [];
+let requsers = [];
 
 app.on('ready', () => {
     window = new BrowserWindow({width: 700, height: 900, show: false});
@@ -26,13 +27,17 @@ app.on('ready', () => {
 ipc.on('requ', (event, args) => {
     event.returnValue = true;
     requests.push(args);
+    requsers.push(1);
     io.emit('requ', args);
 });
 
 ipc.on('remo', (event, args) => {
     event.returnValue = true;
     requests.forEach((req, ind) => {
-        if(req.id == args) requests.splice(ind, 1);
+        if(req.id == args) {
+            requests.splice(ind, 1);
+            requsers.splice(ind, 1);
+        }
     });
     io.emit('remo', args);
 });
@@ -40,6 +45,7 @@ ipc.on('remo', (event, args) => {
 ipc.on('add', (event, args) => {
     event.returnValue = true;
     io.emit('add', args);
+    requsers[args.index]++;
 })
 
 app.on('window-all-closed', () => app.exit());
@@ -50,7 +56,11 @@ ser.get('/widget', (req, res) => {
 
 ser.get('/data', (req, res) => {
     res.setHeader('Content-Type', 'application/json');
-    res.send(requests);
+    let data = [];
+    requests.forEach((req, ind) => {
+        data.push(Object.assign(req, {c: requsers[ind]}));
+    })
+    res.send(data);
 });
 
 http.listen(cfg.port);
