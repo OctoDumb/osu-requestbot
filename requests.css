@@ -1,0 +1,55 @@
+body {
+    background: rgb(25, 25, 25);
+    overflow-x: hidden;
+}
+
+.request {
+    position: relative;
+    height: 100px;
+    width: 650px;
+    margin: 10px;
+    background: rgba(35, 35, 35);
+    border-radius: 10px;
+    color: white;
+    font-family: "Arista 2.0";
+}
+
+.request-title {
+    position: absolute;
+    top: 5px;
+    left: 165px;
+    width: 630px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 19px;
+}
+
+.request-creator {
+    position: absolute;
+    top: 27px;
+    left: 165px;
+    font-size: 14px;
+}
+
+.request-diff {
+    position: absolute;
+    top: 50px;
+    left: 165px;
+}
+
+.request-buttons {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+img {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+i {
+    margin: 0 5px;
+    cursor: pointer;
+}
