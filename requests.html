@@ -49,7 +49,7 @@
                             if(requests.indexOf(bms[0].id) != -1) {
                                 if(requsers[requests.indexOf(bms[0].id)].indexOf(user['user-id']) == -1) {
                                     requsers[requests.indexOf(bms[0].id)].push(user['user-id']);
-                                    ipc.sendSync('add', {id: reqlids[requests.indexOf(bms[0].id)], c: requsers[requests.indexOf(bms[0].id)].length});
+                                    ipc.sendSync('add', {id: reqlids[requests.indexOf(bms[0].id)], index: requests.indexOf(bms[0].id), c: requsers[requests.indexOf(bms[0].id)].length});
                                 }
                                 return;
                             }
@@ -85,7 +85,7 @@
                                         <div class="request-buttons"><i class="fas fa-download" title="Download mapset (osu!direct)" onclick="download('${bms[0].beatmapSetId}')"></i><i class="fas fa-trash" title="Remove request" onclick="remove('${lid}', '${bms[0].id}')"></i></div>`;
                                         document.body.appendChild(div);
                                         fs.unlinkSync(`./cache${bms[0].id}.osu`);
-                                        ipc.sendSync('requ', {bm: bms[0], id: lid});
+                                        ipc.sendSync('requ', {bm: bms[0], id: lid, c: 1});
                                         requests.push(bms[0].id);
                                         requsers.push([user['user-id']]);
                                         reqlids.push(lid);
@@ -96,7 +96,7 @@
                                     <span class="request-creator">by ${bms[0].creator}</span>
                                     <div class="request-buttons"><i class="fas fa-download" title="Download mapset (osu!direct)" onclick="download('${bms[0].beatmapSetId}')"></i><i class="fas fa-trash" title="Remove request" onclick="remove('${lid}', '${bms[0].id}')"></i></div>`;
                                     document.body.appendChild(div);
-                                    ipc.sendSync('requ', {bm: bms[0], id: lid});
+                                    ipc.sendSync('requ', {bm: bms[0], id: lid, c: 1});
                                     requests.push(bms[0].id);
                                     requsers.push([user['user-id']]);
                                     reqlids.push(lid);
