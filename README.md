@@ -15,7 +15,11 @@ Will add soon..
 ```shell
 git clone https://github.com/OctoDumb/osu-requestbot
 ```
-2.  Create a `config.json` file and add this:
+2.  Install dependencies
+```shell
+npm i
+```
+3.  Create a `config.json` file and add this:
 ```json
 {
     "channel":"octopussx",
@@ -34,7 +38,7 @@ git clone https://github.com/OctoDumb/osu-requestbot
 -  osutoken — osu! API token (https://osu.ppy.sh/p/api)
 -  port — widget port
 
-3.  Run it!
+4.  Run it!
 ```shell
 npm start
 ```
