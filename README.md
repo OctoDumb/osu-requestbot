@@ -30,7 +30,7 @@ npm i
     "port":1337
 }
 ```
-[b]Parameters:[/b]
+### Parameters:
 -  channel — your channel name
 -  token — IRC OAuth token (https://twitchapps.com/tmi)
 -  bot — your channel name again
