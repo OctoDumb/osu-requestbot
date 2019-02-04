@@ -1,15 +1,19 @@
 {
   "name": "osu-requestbot",
   "version": "1.0.0",
-  "description": "",
+  "description": "An Electron-based osu! request bot for Twitch",
   "main": "index.js",
   "scripts": {
     "start": "electron ."
   },
-  "author": "uzervlad",
+  "author": "OctoDumb",
   "license": "ISC",
+  "build": {
+    "appID": "org.OctoDumb.osuRequestBot"
+  },
   "devDependencies": {
-    "electron": "^4.0.3"
+    "electron": "^4.0.3",
+    "electron-builder": "^20.38.5"
   },
   "dependencies": {
     "express": "^4.16.4",
