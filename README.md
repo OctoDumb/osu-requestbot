@@ -18,15 +18,15 @@ git clone https://github.com/OctoDumb/osu-requestbot
 -  Create a `config.json` file and add this:
 ```json
 {
-    "channel":"your channel",
-    "token":"IRC token*",
-    "bot":"your channel",
-    "prefix":"request prefix (null for no prefix)",
-    "osutoken":"your osu! API token",
-    "port":1337
+    "channel":"octopussx", /* Channel name */
+    "token":"oauth:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", /* IRC token *(link below) */
+    "bot":"octopussx", /* Channel name again */
+    "prefix":"!r", /* Request command */
+    "osutoken":"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", /* osu! API token */
+    "port":1337 /* Widget port */
 }
 ```
-\* You can get one here: https://twitchapps.com/tmi/
+\* IRC OAuth: https://twitchapps.com/tmi/
 -  Run it!
 ```shell
 npm start
