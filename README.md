@@ -11,23 +11,30 @@ A *simple* Electron-based osu! request bot for Twitch.tv
 Will add soon..
 
 ### Code
--  Clone this repository
+1.  Clone this repository
 ```shell
 git clone https://github.com/OctoDumb/osu-requestbot
 ```
--  Create a `config.json` file and add this:
+2.  Create a `config.json` file and add this:
 ```json
 {
-    "channel":"octopussx", // Channel name
-    "token":"oauth:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", // IRC token *(link below)
-    "bot":"octopussx", // Channel name again
-    "prefix":"!r", // Request command 
-    "osutoken":"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", // osu! API token
-    "port":1337 // Widget port
+    "channel":"octopussx",
+    "token":"oauth:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "bot":"octopussx",
+    "prefix":"!r",
+    "osutoken":"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "port":1337
 }
 ```
-\* IRC OAuth: https://twitchapps.com/tmi/
--  Run it!
+[b]Parameters:[/b]
+-  channel — your channel name
+-  token — IRC OAuth token (https://twitchapps.com/tmi)
+-  bot — your channel name again
+-  prefix — request command
+-  osutoken — osu! API token (https://osu.ppy.sh/p/api)
+-  port — widget port
+
+3.  Run it!
 ```shell
 npm start
 ```
