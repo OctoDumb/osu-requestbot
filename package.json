@@ -4,12 +4,22 @@
   "description": "An Electron-based osu! request bot for Twitch",
   "main": "index.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "./node_modules/.bin/electron-builder build --x64",
+    "build32": "./node_modules/.bin/electron-builder build --ia32"
   },
   "author": "OctoDumb",
   "license": "ISC",
   "build": {
-    "appID": "org.OctoDumb.osuRequestBot"
+    "appId": "org.OctoDumb.osuRequestBot",
+    "extraFiles": [
+      "public"
+    ],
+    "win": {
+      "target": [
+        "NSIS"
+      ]
+    }
   },
   "devDependencies": {
     "electron": "^4.0.3",
