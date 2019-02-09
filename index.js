@@ -20,7 +20,7 @@ app.on('ready', () => {
     window = new BrowserWindow({width: 700, height: 900, show: false});
     window.setResizable(false);
     window.setFullScreenable(false);
-    window.loadFile('requests.html', {hash: JSON.stringify({ch: cfg.channel, token: cfg.token, bot: cfg.bot, prefix: cfg.prefix, osu: cfg.osutoken})});
+    window.loadFile('requests.html', {hash: JSON.stringify({tch: cfg.twchannel, ttoken: cfg.twtoken, ych: cfg.ytchannel, ytoken: cfg.yttoken, prefix: cfg.prefix, osu: cfg.osutoken})});
     window.on('ready-to-show', () => window.show());
 });
 
