@@ -1,6 +1,6 @@
 # osu! request bot
 ***
-A *simple* Electron-based osu! request bot for Twitch.tv
+A *simple* Electron-based osu! request bot for Twitch.tv and YouTube
 
 ## Requirements
 -  Node.JS
@@ -22,21 +22,25 @@ npm i
 3.  Create a `config.json` file and add this:
 ```json
 {
-    "channel":"octopussx",
-    "token":"oauth:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    "bot":"octopussx",
+    "twchannel":"octopussx",
+    "twtoken":"oauth:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "ytchannel":"xxxxxxxxxxxxxxx",
+    "yttoken":"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
     "prefix":"!r",
     "osutoken":"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
     "port":1337
 }
 ```
 ### Parameters:
--  channel — your channel name
--  token — IRC OAuth token (https://twitchapps.com/tmi)
--  bot — your channel name again
+-  twchannel — your Twitch channel name
+-  twtoken — Twitch IRC OAuth token (https://twitchapps.com/tmi) *
+-  ytchannel — your YouTube channel ID
+-  yttoken — YouTube Data API v3 token *
 -  prefix — request command
 -  osutoken — osu! API token (https://osu.ppy.sh/p/api)
 -  port — widget port
+
+\* To disable bot - set token value to `null`
 
 4.  Run it!
 ```shell
