@@ -24,7 +24,7 @@ npm i
 {
     "twchannel":"octopussx",
     "twtoken":"oauth:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    "ytchannel":"xxxxxxxxxxxxxxx",
+    "ytchannel":"UC9TyHiTiHHlsnG73ji13wdg",
     "yttoken":"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
     "prefix":"!r",
     "osutoken":"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
