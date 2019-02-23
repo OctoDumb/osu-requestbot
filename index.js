@@ -46,12 +46,16 @@ ipc.on('add', (event, args) => {
     event.returnValue = true;
     io.emit('add', args);
     requsers[args.index]++;
-})
+});
 
 app.on('window-all-closed', () => app.exit());
 
 ser.get('/widget', (req, res) => {
     res.send(fs.readFileSync('./widget.html').toString().split("{port}").join(cfg.port));
+});
+
+ser.get('/widgetjs', (req, res) => {
+    res.send(fs.readFileSync('./public/widget.js').toString().split("{port}").join(cfg.port));
 });
 
 ser.get('/data', (req, res) => {
